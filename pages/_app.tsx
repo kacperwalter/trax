@@ -1,3 +1,5 @@
+// course materials: https://tinted-gym-f99.notion.site/Fullstack-course-notes-Students-3202660c315b438aba6c1ae051963572
+
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import 'reset-css'
 import PlayerLayout from '../components/playerLayout'

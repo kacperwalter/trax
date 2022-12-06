@@ -1,3 +1,5 @@
+import NextImage from 'next/image' // builtin image optimizer that do a lot of compression
+
 import {
   Box,
   List,
@@ -27,7 +29,10 @@ const Sidebar = () => {
       color="gray"
     >
       <Box paddingY="20px">
-        <Box width="120px"></Box>
+        <Box width="120px" marginBottom="20px" paddingX="20px">
+          {/* we style it like this (curly braces) because it's not ChakraUI related stuff */}
+          <NextImage src="/logo.svg" height={60} width={120}/> 
+        </Box>
       </Box>
     </Box>
   )
