@@ -52,6 +52,8 @@ const musicMenu = [
   },
 ]
 
+const playlists = new Array(30).fill(1).map((_, i) => `Playlist ${i + 1}`)
+
 const Sidebar = () => {
   return (
     <Box 
@@ -61,12 +63,13 @@ const Sidebar = () => {
       paddingX="5px"
       color="gray"
     >
+      
       <Box paddingY="20px">
         <Box width="120px" marginBottom="20px" paddingX="20px">
           {/* we style it like this (curly braces) because it's not ChakraUI related stuff */}
           <NextImage src="/logo.svg" height={60} width={120} alt={''}/> 
         </Box>
-        
+
         <Box marginBottom="20px">
           <List spacing={2}>
             {/* TODO - rethink components in this project and made them atomic design */}
@@ -86,8 +89,6 @@ const Sidebar = () => {
           </List>
         </Box>
 
-        <Divider bg="gray.800"/>
-
         <Box marginTop="20px">
           <List spacing={2}>
             {musicMenu.map(item => (
@@ -105,6 +106,13 @@ const Sidebar = () => {
           </List>
         </Box>
       </Box>
+
+      <Divider bg="gray.800"/>
+
+      <Box height="66%" overflowY="auto" paddingY="20px">
+        {new Array(50).fill(1).map(() => <h1>Hello</h1>)}
+      </Box>
+
     </Box>
   )
 }
