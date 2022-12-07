@@ -66,6 +66,7 @@ const Sidebar = () => {
           {/* we style it like this (curly braces) because it's not ChakraUI related stuff */}
           <NextImage src="/logo.svg" height={60} width={120} alt={''}/> 
         </Box>
+        
         <Box marginBottom="20px">
           <List spacing={2}>
             {/* TODO - rethink components in this project and made them atomic design */}
@@ -84,7 +85,9 @@ const Sidebar = () => {
             ))}
           </List>
         </Box>
+
         <Divider bg="gray.800"/>
+
         <Box marginTop="20px">
           <List spacing={2}>
             {musicMenu.map(item => (
